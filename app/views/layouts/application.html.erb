@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Schedule App" %></title>
+    <title>スケジュール管理アプリ</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -18,6 +18,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="app-header">
+        <div class="app-header__inner">
+          <div class="app-header__title">スケジュール管理アプリ</div>
+        </div>
+    </header>
+
+    <main class="app-main">
+      <%= yield %>
+    </main>
+
+    <% if notice %>
+      <div class="flash flash--notice"><%= notice %></div>
+    <% end %>
+
+    <% if alert %>
+      <div class="flash flash--alert"><%= alert %></div>
+    <% end %>
   </body>
 </html>

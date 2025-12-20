@@ -13,3 +13,251 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F6F6F6;
+}
+
+.app-header {
+  background-color: #1C1D3A;
+  color: #fff;
+  padding: 14px 0;
+}
+
+.app-header__inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-header__title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.app-main {
+  max-width: 980px;
+  margin: 0 auto 40px;
+  padding: 0;
+}
+
+.card {
+  padding: 18px 10px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #2962FF;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.table-box {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.schedule-table {
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.schedule-table thead th {
+  padding: 10px 16px;
+  text-align: left !important;
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.schedule-table tbody td {
+  padding: 20px 16px;
+  font-size: 13px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.schedule-table a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.action-link {
+  white-space: nowrap;
+}
+
+.summary-card {
+  max-width: 980px;
+  margin: 40px auto 0;
+  padding: 12px 23px;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary-card__item:last-child {
+  color: #333333;
+}
+
+.summary-card__item:last-child {
+  color: #A2A2A4;
+  font-size: 13px;
+}
+
+.summary-card__num {
+  font-weight: 700;
+}
+
+.flash {
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12);
+  font-size: 14px;
+  padding: 1rem 1rem;
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 288px;
+  width: fit-content;
+  z-index: 1000;
+}
+
+.flash--alert {
+  background-color: #FF4949;
+}
+
+/* 新規登録ページ */
+.page-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  max-width: 635px;
+  margin: 28px auto 18px;
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  padding: 26px 28px;
+  margin: 0 auto;
+  max-width: 580px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-required {
+  color: #FF4949;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid #cfd8dc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #92BDFE;
+}
+
+.form-textarea {
+  min-height: 125px;
+  resize: vertical;
+}
+
+.form-label--checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.form-checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+.form-group--memo {
+  margin-bottom: 10px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 13px;
+  margin: 0;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #111;
+  border: 1px solid #d0d0d0;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  padding: 10px 22px;
+}
