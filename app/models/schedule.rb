@@ -13,7 +13,7 @@ class Schedule < ApplicationRecord
     return if start_date.blank? || end_date.blank?
 
     if end_date < start_date
-      error.add(:end_date, "は開始日以降の日付で選択してください")
+      errors.add(:end_date, "は開始日以降の日付で選択してください")
     end
   end
 end

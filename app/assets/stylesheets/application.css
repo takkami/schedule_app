@@ -260,6 +260,14 @@ body {
   font-weight: bold;
 }
 
+.field-errors {
+  margin: 5px 0 0;
+  padding: 0;
+  list-style: none;
+  color: #FF4949;
+  font-size: 12px;
+}
+
 /* 詳細ページ */
 .detail-card {
   max-width: 640px;

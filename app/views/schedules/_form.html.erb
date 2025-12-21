@@ -6,6 +6,7 @@
         タイトル <span class="form-required">*</span>
       </label>
       <%= f.text_field :title, class: "form-input", placeholder: "タイトル" %>
+      <%= render "shared/error", object: @schedule, field: :title %>
     </div>
 
     <div class="form-row">
@@ -14,12 +15,14 @@
           開始日 <span class="form-required">*</span>
         </label>
         <%= f.date_field :start_date, class: "form-input" %>
+        <%= render "shared/error", object: @schedule, field: :start_date %>
       </div>
       <div class="form-group">
         <label class="form-label">
           終了日 <span class="form-required">*</span>
         </label>
         <%= f.date_field :end_date, class: "form-input" %>
+        <%= render "shared/error", object: @schedule, field: :end_date %>
       </div>
     </div>
 
@@ -33,6 +36,7 @@
     <div class="form-group form-group--memo">
       <label class="form-label">スケジュールメモ</label>
       <%= f.text_area :memo, class: "form-textarea", placeholder: "メモを入力する" %>
+      <%= render "shared/error", object: @schedule, field: :memo %>
     </div>
 
     <div class="form-actions">
