@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-header">
     <h2 class="card-title">予定一覧</h2>
-    <%= link_to "新規追加", new_schedule_path, class: "btn btn-primary" %>
+    <%= link_to "＋ 新規追加", new_schedule_path, class: "btn btn-primary" %>
   </div>
 
   <div class="table-box">
@@ -24,8 +24,8 @@
           <tr>
             <td><%= schedule.id %></td>
             <td><%= schedule.title %></td>
-            <td><%= schedule.start_date %></td>
-            <td><%= schedule.end_date %></td>
+            <td><%= schedule.start_date.to_fs(:date_jp) %></td>
+            <td><%= schedule.end_date.to_fs(:date_jp) %></td>
             <td><%= "○" if schedule.all_day? %></td>
             <td><%= schedule.updated_at.in_time_zone.to_fs(:datetime_jp) %></td>
             <td><%= link_to "詳細", schedule_path(schedule), class: "action-link" %></td>
