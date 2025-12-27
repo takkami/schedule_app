@@ -1,0 +1,27 @@
+<div class="detail-card">
+  <%= link_to "← 一覧に戻る", schedules_path, class: "back-link" %>
+  <div class="page-header">
+    <h2 class="card-title"><%= @schedule.title %></h2>
+    <%= link_to "✐ 編集", edit_schedule_path(@schedule), class: "btn btn-primary" %>
+  </div>
+  <div class="detail-table-box">
+    <table class="detail-table">
+      <tr>
+        <th>開始日</th>
+        <td><%= @schedule.start_date %></td>
+      </tr>
+      <tr>
+        <th>終了日</th>
+        <td><%= @schedule.end_date %></td>
+      </tr>
+      <tr>
+        <th>終日</th>
+        <td><%= "○" if @schedule.all_day? %></td>
+      </tr>
+      <tr>
+        <th>スケジュールメモ</th>
+        <td class="detail-memo"><%= simple_format(h(@schedule.memo)) %></td>
+      </tr>
+    </table>
+  </div>
+</div>

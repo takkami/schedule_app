@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Schedule App" %></title>
+    <title>スケジュール管理アプリ</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -13,11 +13,28 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <header class="app-header">
+        <div class="app-header__inner">
+          <div class="app-header__title">スケジュール管理アプリ</div>
+        </div>
+    </header>
+
+    <main class="app-main">
+      <%= yield %>
+    </main>
+
+    <% if notice %>
+      <div class="flash flash--notice"><%= notice %></div>
+    <% end %>
+
+    <% if alert %>
+      <div class="flash flash--alert"><%= alert %></div>
+    <% end %>
   </body>
 </html>

@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">予定一覧</h2>
+    <%= link_to "＋ 新規追加", new_schedule_path, class: "btn btn-primary" %>
+  </div>
+
+  <div class="table-box">
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>タイトル</th>
+          <th>開始日</th>
+          <th>終了日</th>
+          <th>終日</th>
+          <th>更新日時</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @schedules.each do |schedule| %>
+          <tr>
+            <td><%= schedule.id %></td>
+            <td><%= schedule.title %></td>
+            <td><%= schedule.start_date.to_fs(:date_jp) %></td>
+            <td><%= schedule.end_date.to_fs(:date_jp) %></td>
+            <td><%= "○" if schedule.all_day? %></td>
+            <td><%= schedule.updated_at.in_time_zone.to_fs(:datetime_jp) %></td>
+            <td><%= link_to "詳細", schedule_path(schedule), class: "action-link" %></td>
+            <td><%= link_to "編集", edit_schedule_path(schedule), class: "action-link" %></td>
+            <td>
+              <%= link_to "削除",
+                          schedule_path(schedule),
+                          class: "action-link",
+                          data: {
+                            turbo_method: :delete,
+                            turbo_confirm: "「#{schedule.title}」を削除してよろしいですか？\nこの操作は取り消せません。"
+                          } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="summary-card">
+    <p class="summary-card__item">
+      予定合計 <span class="summary-card__num"><%= @schedules.size %></span>件
+    </p>
+    <p class="summary-card__item">本日の日付 <%= @today.to_fs(:date_jp) %></p>
+  </div>
+</div>

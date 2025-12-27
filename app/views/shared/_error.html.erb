@@ -1,0 +1,7 @@
+<% if object.present? && object.errors[field].any? %>
+  <ul class="field-errors">
+    <% object.errors.full_messages_for(field).each do |message| %>
+      <li class="field_error"><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
