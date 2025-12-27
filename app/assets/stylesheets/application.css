@@ -331,6 +331,21 @@ html, body {
   line-height: 1.7;
 }
 
+.flatpickr-months {
+  background: #39f;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.flatpickr-months .flatpickr-current-month {
+  padding-top: 5px;
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+  padding-top: 8px;
+}
+
 @media screen and (max-width: 768px) {
   .app-main {
     padding: 0;
